@@ -5,8 +5,9 @@ namespace CheckString
 {
    public class Calculator
     {
-        public static int GetMaxIndexesDifference(List<int> indexes)
+        public static int GetMaxIndexesDifference(char[] arrayOfUserStringChars)
         {
+            List<int> indexes = GetIndexesOfRepeatableFollowingChars(arrayOfUserStringChars);
             int max = indexes.ElementAt(0);
 
             for (int i = 0; i < indexes.Count - 1; i++)

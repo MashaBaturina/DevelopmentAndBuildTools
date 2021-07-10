@@ -1,19 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace CheckString
 {
     public class Program
     {
         public static void Main(string[] args)
-        {          
-            string userString = args[0];
+        {
+            string userString = StringHelper.ConcatenateStringsIntoOneString(args);
 
             char[] arrayOfUserStringChars = userString.ToCharArray();
 
-            List<int> userStringIndexesOfRepeatableFollowingChars = Calculator.GetIndexesOfRepeatableFollowingChars(arrayOfUserStringChars);
-
-            int maxIndexesDifference = Calculator.GetMaxIndexesDifference(userStringIndexesOfRepeatableFollowingChars);
+            int maxIndexesDifference = Calculator.GetMaxIndexesDifference(arrayOfUserStringChars);
 
             Console.WriteLine(maxIndexesDifference);
         }
