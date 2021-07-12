@@ -25,7 +25,7 @@ namespace CheckString
 
         public static List<int> GetIndexesOfRepeatableFollowingChars(char[] arrayOfUserStringChars)
         {
-            List<int> indexes = new List<int>();
+            List<int> indexes = new();
 
             for (int i = 0; i < arrayOfUserStringChars.Length - 1; i++)
             {
@@ -33,7 +33,10 @@ namespace CheckString
                 {
                     indexes.Add(i);
                 }
-
+                if (i == arrayOfUserStringChars.Length - 2)
+                {
+                    indexes.Add(arrayOfUserStringChars.Length);
+                }
                 if (arrayOfUserStringChars[i] == arrayOfUserStringChars[i + 1])
                 {
                     indexes.Add(i + 1);

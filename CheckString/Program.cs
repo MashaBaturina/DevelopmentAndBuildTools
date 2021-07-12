@@ -6,11 +6,11 @@ namespace CheckString
     {
         public static void Main(string[] args)
         {
-            string userString = StringHelper.ConcatenateStringsIntoOneString(args);
+            string userInput = StringHelper.ConcatenateStringsIntoOneString(args);
 
-            char[] arrayOfUserStringChars = userString.ToCharArray();
+            char[] arrayOfUserInputChars = userInput.ToCharArray();
 
-            int maxIndexesDifference = Calculator.GetMaxIndexesDifference(arrayOfUserStringChars);
+            int maxIndexesDifference = Calculator.GetMaxIndexesDifference(arrayOfUserInputChars);
 
             Console.WriteLine(maxIndexesDifference);
         }
